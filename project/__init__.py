@@ -7,7 +7,7 @@ db = SQLAlchemy()
 
 
 def create_app():
-    app = Flask(__name__)
+    app = Flask(__name__, static_folder="../flask_auth_app_ui/dist", static_url_path="")
 
     app.config["SECRET_KEY"] = "secret-key-goes-here"
     app.config["SQLALCHEMY_DATABASE_URI"] = "sqlite:///db.sqlite"
